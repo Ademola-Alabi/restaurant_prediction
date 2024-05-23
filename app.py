@@ -60,11 +60,3 @@ features = [number_of_customers, menu_price, marketing_spent, average_customer_s
 if st.button('Predict', key='predict_button', help='Click to predict the monthly income'):
     prediction = predict(features)
     st.markdown(f"<h3 style='text-align: center; color: #2980B9;'>The predicted monthly income is: ${prediction:.2f}</h3>", unsafe_allow_html=True)
-
-# Add instructions for deploying the app
-st.header('Instructions for Deployment')
-st.write('To deploy this app on Streamlit Cloud:')
-st.write('1. Save this script as `app.py`.')
-st.write('2. Ensure the model files `random_forest_regressor_model.joblib` and `scaler.joblib` are in the same directory.')
-st.write('3. Create a new repository on GitHub and push the files.')
-st.write('4. Go to [Streamlit Cloud](https://streamlit.io/cloud) and link the GitHub repository to deploy the app.')
